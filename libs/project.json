@@ -8,7 +8,7 @@
   "targets": {
     "build": {
       "executor": "@nx/angular:ng-packagr-lite",
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "outputs": ["{workspaceRoot}/dist/hmcts-angular"],
       "options": {
         "project": "libs/ng-package.json"
       },
@@ -20,8 +20,7 @@
           "tsConfig": "libs/tsconfig.lib.json"
         }
       },
-      "defaultConfiguration": "production",
-      "outputs": ["{workspaceRoot}/dist/hmcts-angular"]
+      "defaultConfiguration": "production"
     },
     "test": {
       "executor": "@nx/jest:jest",
