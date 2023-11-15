@@ -1,5 +1,5 @@
 {
-  "name": "sa-components ",
+  "name": "sa-components",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/src",
   "prefix": "lib",
@@ -7,7 +7,7 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/angular:package",
+      "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
         "project": "libs/ng-package.json"
@@ -20,7 +20,8 @@
           "tsConfig": "libs/tsconfig.lib.json"
         }
       },
-      "defaultConfiguration": "production"
+      "defaultConfiguration": "production",
+      "outputs": ["{workspaceRoot}/dist/hmcts-angular"]
     },
     "test": {
       "executor": "@nx/jest:jest",
