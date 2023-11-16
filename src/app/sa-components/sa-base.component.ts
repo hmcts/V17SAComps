@@ -4,10 +4,8 @@ import {
   GovukHeaderComponent,
   GovukFooterComponent,
   GovukCookieBannerComponent,
-  GovukPhaseBannerComponent,
-  AddUserAddressContainerComponent
-  } from '@hmcts-sa-components';
-import {TestPage1Component} from "./sa-component-testpages/test-page1/test-page1.component";
+  GovukPhaseBannerComponent, } from '@hmcts-sa-components';
+import {RouterOutlet} from "@angular/router";
 
 
 @Component({
@@ -18,8 +16,8 @@ import {TestPage1Component} from "./sa-component-testpages/test-page1/test-page1
     GovukHeaderComponent,
     GovukCookieBannerComponent,
     GovukPhaseBannerComponent,
-    AddUserAddressContainerComponent, TestPage1Component],
-  templateUrl: './sa-components.component.html',
-  styleUrls: ['./sa-components.component.scss'],
+    RouterOutlet],
+  templateUrl: './sa-base.component.html',
+  styleUrls: ['./sa-base.component.scss'],
 })
-export class SaComponentsComponent {}
+export class SaBaseComponent {}

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+// components
 import { GovukButtonComponent } from './components/govuk-button/govuk-button.component';
 import { GovukPanelComponent } from './components/govuk-panel/govuk-panel.component';
 import { GovukNavbarComponent } from './components/govuk-navbar/govuk-navbar.component';
@@ -48,7 +48,7 @@ import { GovukInsetTextComponent } from './components/govuk-inset-text/govuk-ins
 import { GovukNotificationBannerComponent } from './components/govuk-notification-banner/govuk-notification-banner.component';
 import { GovukCookieBannerComponent } from './components/govuk-cookie-banner/govuk-cookie-banner.component';
 import { GovukCookieBannerConfirmationComponent } from './components/govuk-cookie-banner/govuk-cookie-banner-confirmation.component';
-
+//Directives
 import { GovukErrorLineDirective } from './directives/govuk-error-line.directive';
 import { WarningButtonDirective } from './directives/warning-button.directive';
 import { SecondaryButtonDirective } from './directives/secondary-button.directive';
@@ -56,7 +56,7 @@ import { ImportantButtonDirective } from './directives/important-button.directiv
 import { GreyTagDirective } from './directives/grey-tag.directive';
 import { NoMarginHintDirective } from './directives/no-margin-hint.directive';
 import { SuccessNotificationBannerDirective } from './directives/success-notification-banner.directive';
-
+//icons
 import { ArrowRightIcon } from "./icons/arrow-right.icon";
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -65,10 +65,11 @@ import { GovukErrorLinkComponent, GovukErrorSummaryComponent } from './component
 import { GovukInputAutocompleteComponent } from './components/govuk-input-autocomplete/govuk-input-autocomplete.component';
 import { GovukCookieBannerMessageComponent } from './components/govuk-cookie-banner/govuk-cookie-banner-message.component';
 import { GovukTaskListRowComponent } from './components/govuk-task-list/govuk-task-list-row.component';
-import {AddUserAddressContainerComponent} from "./wrappers/AddUserAddress/add-user-address-container-component";
+import {AddressFormComponent} from "./patterns/address-form/address-form.component";
+//models
+import {Address} from "./models/address-model";
 
 const components = [
-  AddUserAddressContainerComponent,
   GovukButtonComponent,
   GovukPanelComponent,
   GovukNavbarComponent,
@@ -137,8 +138,16 @@ const icons = [
   ArrowRightIcon
 ]
 
+const models =[
+  Address
+]
+
 const pipes = [
   AbsoluteValuePipe,
+]
+
+const patterns = [
+  AddressFormComponent
 ]
 
 @NgModule({
@@ -150,13 +159,15 @@ const pipes = [
         ...icons,
         ...directives,
         ...pipes,
+        ...patterns,
         GovukCookieBannerMessageComponent,
     ],
     exports: [
         ...components,
         ...icons,
         ...directives,
-        ...pipes
+        ...pipes,
+      ...patterns
     ],
 })
 export class HmctsAngularSaModule { }

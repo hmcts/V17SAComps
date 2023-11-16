@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from "@angular/router";
-import {AddressFormComponent} from "../../patterns/address-form/address-form.component";
-import {Address} from "../../models/address-model";
+import {
+  AddressFormComponent,
+  Address
+} from "@hmcts-sa-components";
+
 
 @Component({
   selector: 'govuk-add-user-address-container-component',
@@ -12,9 +15,11 @@ import {Address} from "../../models/address-model";
   styleUrls: ['./add-user-address-container-component.scss'],
 })
 export class AddUserAddressContainerComponent {
-  constructor(private router: Router, private route: ActivatedRoute) {
+  @Input()
+  nextStep: string =''
+  constructor(private readonly router: Router, private readonly route: ActivatedRoute) {
   }
   submitNext(address:Address) {
-    //this.router.navigate(['bank-details'],{relativeTo: this.route.parent});
+    this.router.navigate([this.nextStep],{relativeTo: this.route.parent});
   }
 }
