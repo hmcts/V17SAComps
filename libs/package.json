@@ -1,12 +1,13 @@
 {
   "name": "@hmcts/sa-components",
-  "version": "0.0.2-beta.5",
+  "version": "0.0.2-beta.6",
   "peerDependencies": {
     "@angular/common": "^17.0.2",
     "@angular/core": "^17.0.2",
     "ngx-wig": "^16.0.0",
     "govuk-frontend": "4.6.0"
   },
+  "private": false,
   "dependencies": {
     "tslib": "^2.3.0"
   },

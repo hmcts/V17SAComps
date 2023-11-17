@@ -1,6 +1,6 @@
 {
   "name": "v17-sacomps",
-  "version": "0.0.2-beta.5",
+  "version": "0.0.2-beta.6",
   "scripts": {
     "ng": "ng",
     "start": "nx serve",
@@ -8,7 +8,7 @@
     "watch": "nx build --watch --configuration development",
     "test": "nx test"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "17.0.3",
     "@angular/common": "17.0.3",
