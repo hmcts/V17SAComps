@@ -24,10 +24,11 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build sa-components
 
-      - name: change directory
-        run: cd dist/libs
-
       - name: Publish version
-        run: yarn publish --new-version ${{ steps.release.outputs.version }} --access public
+        run: yarn publish  dist/libs --new-version ${{ steps.release.outputs.version }} --access public
+        with:
+          node-version: 18
+          registry-url: https://npm.pkg.github.com/
+          scope: '@hmcts'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_api_token }}
