@@ -1,5 +1,5 @@
 {
-  "name": "sa-components",
+  "name": "@hmcts/sa-components",
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/src",
   "prefix": "lib",
