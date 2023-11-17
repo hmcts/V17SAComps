@@ -20,4 +20,12 @@ import {RouterOutlet} from "@angular/router";
   templateUrl: './sa-base.component.html',
   styleUrls: ['./sa-base.component.scss'],
 })
-export class SaBaseComponent {}
+export class SaBaseComponent {
+  defaultLinks = [
+    { title: 'Privacy', href: 'https://www.gov.uk/service-manual/design/collecting-personal-information-from-users' },
+    { title: 'Accessibility', href: 'https://www.gov.uk/service-manual/helping-people-to-use-your-service/publishing-information-about-your-services-accessibility' },
+    { title: 'Cookies', href: 'https://design-system.service.gov.uk/patterns/cookies-page/' }
+  ]
+
+  defaultTitle = "Test Service"
+}

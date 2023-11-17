@@ -6,7 +6,7 @@ import {AddUserAddressContainerComponent} from "../../../wrappers/AddUserAddress
 @Component({
   selector: 'lib-test-page1',
   standalone: true,
-  imports: [CommonModule, AddUserAddressContainerComponent, AddUserAddressContainerComponent],
+  imports: [CommonModule, AddUserAddressContainerComponent],
   templateUrl: './test-page1.component.html',
   styleUrls: ['./test-page1.component.scss'],
 })
