@@ -1,6 +1,6 @@
 {
   "name": "v17-sacomps",
-  "version": "0.0.2-beta.6",
+  "version": "0.0.2-beta.8",
   "scripts": {
     "ng": "ng",
     "start": "nx serve",
