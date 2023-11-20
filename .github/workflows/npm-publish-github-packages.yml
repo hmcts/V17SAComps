@@ -22,6 +22,6 @@ jobs:
       #- run: yarn test -- add proper tests later
       - run: yarn publish ./dist/libs
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.npm_api_token }}
 
 
