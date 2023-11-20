@@ -20,7 +20,7 @@ jobs:
       - run: yarn lint
       - run: yarn run nx build sa-components
       #- run: yarn test -- add proper tests later
-      - run: yarn publish ./dist/libs
+      - run: yarn publish ./dist/libs --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_api_token }}
 
