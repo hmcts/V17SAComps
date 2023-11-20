@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {AddUserAddressContainerComponent} from "../../../wrappers/AddUserAddress/add-user-address-container-component";
-
+import { AddUserAddressContainerComponent } from '../../../wrappers/AddUserAddress/add-user-address-container-component';
 
 @Component({
   selector: 'lib-test-page1',

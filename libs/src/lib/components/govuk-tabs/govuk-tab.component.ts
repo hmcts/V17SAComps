@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'govuk-tab',
-    templateUrl: './govuk-tab.component.html',
-    standalone: true
+  selector: 'govuk-tab',
+  templateUrl: './govuk-tab.component.html',
+  standalone: true,
 })
 export class GovukTabComponent {
   @Input() public id!: string;

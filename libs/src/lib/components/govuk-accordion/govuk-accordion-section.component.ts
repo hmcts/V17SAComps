@@ -2,10 +2,10 @@ import { Component, Input } from '@angular/core';
 import { NgClass, NgIf } from '@angular/common';
 
 @Component({
-    selector: 'govuk-accordion-section',
-    templateUrl: './govuk-accordion-section.component.html',
-    standalone: true,
-    imports: [NgClass, NgIf]
+  selector: 'govuk-accordion-section',
+  templateUrl: './govuk-accordion-section.component.html',
+  standalone: true,
+  imports: [NgClass, NgIf],
 })
 export class GovukAccordionSectionComponent {
   @Input() public id!: string;
@@ -15,7 +15,13 @@ export class GovukAccordionSectionComponent {
 
   expandClassName?: string = 'govuk-accordion__section--expanded';
 
-  expand() { this.active = !this.active; }
-  open() { this.active = true; }
-  close() { this.active = false; }
+  expand() {
+    this.active = !this.active;
+  }
+  open() {
+    this.active = true;
+  }
+  close() {
+    this.active = false;
+  }
 }

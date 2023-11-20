@@ -1,13 +1,19 @@
-import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  Output,
+} from '@angular/core';
 import { GovukLinkActionComponent } from '../govuk-link-action/govuk-link-action.component';
 import { FormsModule } from '@angular/forms';
 import { GovukFieldsetComponent } from '../govuk-fieldset/govuk-fieldset.component';
 
 @Component({
-    selector: 'govuk-date-input',
-    templateUrl: './govuk-date-input.component.html',
-    standalone: true,
-    imports: [GovukFieldsetComponent, FormsModule, GovukLinkActionComponent]
+  selector: 'govuk-date-input',
+  templateUrl: './govuk-date-input.component.html',
+  standalone: true,
+  imports: [GovukFieldsetComponent, FormsModule, GovukLinkActionComponent],
 })
 export class GovukDateInputComponent {
   @Input() public id?: string;
@@ -28,7 +34,7 @@ export class GovukDateInputComponent {
   @Input() public linkActionText?: string;
   @Input() public linkActionAction?: any;
 
-  @Output() modelChange  = new EventEmitter();
+  @Output() modelChange = new EventEmitter();
 
   el: any;
 
@@ -36,6 +42,6 @@ export class GovukDateInputComponent {
 
   constructor(el: ElementRef) {
     this.el = el;
-    this.model = { day: "", month: "", year: "" };
+    this.model = { day: '', month: '', year: '' };
   }
 }

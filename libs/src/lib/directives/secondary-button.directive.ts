@@ -1,16 +1,19 @@
-import { AfterViewInit, Directive, ElementRef, Renderer2 } from "@angular/core";
+import { AfterViewInit, Directive, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-    selector: '[secondary-button]',
-    standalone: true
+  selector: '[secondary-button]',
+  standalone: true,
 })
 export class SecondaryButtonDirective implements AfterViewInit {
-  
-    constructor(private el: ElementRef, private renderer: Renderer2) {
-    }
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2,
+  ) {}
 
-    ngAfterViewInit(): void {
-        this.renderer.addClass(this.el.nativeElement.querySelector('a'), 'govuk-button--secondary');
-    }
-
+  ngAfterViewInit(): void {
+    this.renderer.addClass(
+      this.el.nativeElement.querySelector('a'),
+      'govuk-button--secondary',
+    );
+  }
 }

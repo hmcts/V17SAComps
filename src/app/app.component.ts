@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import {SaBaseComponent} from "./sa-components/sa-base.component";
-
+import { SaBaseComponent } from './sa-components/sa-base.component';
 
 @Component({
   standalone: true,

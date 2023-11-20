@@ -1,11 +1,10 @@
-
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'govuk-cookie-banner-message',
-    templateUrl: './govuk-cookie-banner-message.component.html',
-    styleUrls: ['./govuk-cookie-banner-message.component.css'],
-    standalone: true
+  selector: 'govuk-cookie-banner-message',
+  templateUrl: './govuk-cookie-banner-message.component.html',
+  styleUrls: ['./govuk-cookie-banner-message.component.css'],
+  standalone: true,
 })
 export class GovukCookieBannerMessageComponent {
   @Input() public id?: string;

@@ -1,13 +1,18 @@
-
-  <govuk-accordion [id]="'writing'" class="govuk-header__container--full-width full-width">
-      @for (item of testContent; track item.id){
+<govuk-accordion
+  [id]="'writing'"
+  class="govuk-header__container--full-width full-width"
+>
+  @for (item of testContent; track item.id) {
     <div class="govuk-width-container">
-     <govuk-accordion-section id="{{item.id}}" heading="{{item.heading}}" summary="{{item.summary}}" >
-     <p>
-     {{item.summary}}
-     </p>
-</govuk-accordion-section>
-</div>
-    }
-  </govuk-accordion>
-
+      <govuk-accordion-section
+        id="{{ item.id }}"
+        heading="{{ item.heading }}"
+        summary="{{ item.summary }}"
+      >
+        <p>
+          {{ item.summary }}
+        </p>
+      </govuk-accordion-section>
+    </div>
+  }
+</govuk-accordion>

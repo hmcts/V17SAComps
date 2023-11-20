@@ -5,13 +5,17 @@ import { NgIf } from '@angular/common';
 import { GovukErrorLineDirective } from '../../directives/govuk-error-line.directive';
 
 @Component({
-    selector: 'govuk-fieldset',
-    templateUrl: './govuk-fieldset.component.html',
-    standalone: true,
-    imports: [GovukErrorLineDirective, NgIf, GovukHintComponent, GovukErrorComponent]
+  selector: 'govuk-fieldset',
+  templateUrl: './govuk-fieldset.component.html',
+  standalone: true,
+  imports: [
+    GovukErrorLineDirective,
+    NgIf,
+    GovukHintComponent,
+    GovukErrorComponent,
+  ],
 })
 export class GovukFieldsetComponent {
-
   @Input() public id?: string;
   @Input() public class?: string;
 
@@ -24,5 +28,4 @@ export class GovukFieldsetComponent {
 
   @Input() public errorText?: string;
   @Input() public errorClass?: string;
-
 }

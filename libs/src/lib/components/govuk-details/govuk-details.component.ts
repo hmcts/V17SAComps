@@ -1,12 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-    selector: 'govuk-details',
-    templateUrl: './govuk-details.component.html',
-    standalone: true
+  selector: 'govuk-details',
+  templateUrl: './govuk-details.component.html',
+  standalone: true,
 })
 export class GovukDetailsComponent {
-
   @Input() public id?: string;
   @Input() public name?: string;
   @Input() public class?: string;
@@ -21,6 +20,6 @@ export class GovukDetailsComponent {
   raiseEvents() {
     this.isOpen ? this.closed.emit() : this.opened.emit();
     this.isOpen = !this.isOpen;
-    this.clicked.emit({ isOpen: this.isOpen });   
+    this.clicked.emit({ isOpen: this.isOpen });
   }
 }

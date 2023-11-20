@@ -1,9 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'govuk-breadcrumb-group',
-    templateUrl: './govuk-breadcrumb-group.component.html',
-    standalone: true
+  selector: 'govuk-breadcrumb-group',
+  templateUrl: './govuk-breadcrumb-group.component.html',
+  standalone: true,
 })
-export class GovukBreadcrumbGroupComponent {
-}
+export class GovukBreadcrumbGroupComponent {}

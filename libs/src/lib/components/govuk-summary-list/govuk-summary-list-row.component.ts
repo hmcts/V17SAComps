@@ -1,9 +1,16 @@
-import { Component, EventEmitter, Input, Output, TemplateRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  TemplateRef,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
-    selector: 'govuk-summary-list-row',
-    templateUrl: './govuk-summary-list-row.component.html',
-    standalone: true,
+  selector: 'govuk-summary-list-row',
+  templateUrl: './govuk-summary-list-row.component.html',
+  standalone: true,
 })
 export class GovukSummaryListRowComponent {
   @Input() public key?: string;
@@ -15,5 +22,4 @@ export class GovukSummaryListRowComponent {
 
   @ViewChild(TemplateRef)
   template!: TemplateRef<any>;
-
 }

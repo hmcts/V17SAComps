@@ -3,14 +3,13 @@ import { GovukHintComponent } from '../govuk-hint/govuk-hint.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-    selector: 'govuk-radio',
-    templateUrl: './govuk-radio.component.html',
-    styleUrls: ['./govuk-radio.component.scss'],
-    standalone: true,
-    imports: [FormsModule, GovukHintComponent]
+  selector: 'govuk-radio',
+  templateUrl: './govuk-radio.component.html',
+  styleUrls: ['./govuk-radio.component.scss'],
+  standalone: true,
+  imports: [FormsModule, GovukHintComponent],
 })
 export class GovukRadioComponent {
-
   @Input() public id!: string;
   @Input() public value!: any;
   @Input() public name!: any;

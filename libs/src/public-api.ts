@@ -50,7 +50,7 @@ export * from './lib/components/govuk-cookie-banner/govuk-cookie-banner.componen
 export * from './lib/components/govuk-cookie-banner/govuk-cookie-banner-confirmation.component';
 export * from './lib/components/govuk-error-summary/govuk-error-summary.component';
 export * from './lib/components/govuk-input-autocomplete/govuk-input-autocomplete.component';
-export * from './lib/components/govuk-text-editor/govuk-text-editor.component'
+export * from './lib/components/govuk-text-editor/govuk-text-editor.component';
 
 export * from './lib/directives/govuk-error-line.directive';
 export * from './lib/directives/important-button.directive';
@@ -62,6 +62,6 @@ export * from './lib/directives/success-notification-banner.directive';
 
 export * from './lib/icons/arrow-right.icon';
 
-export * from './lib/patterns/address-form/address-form.component'
+export * from './lib/patterns/address-form/address-form.component';
 
-export * from './lib/models/address-model'
+export * from './lib/models/address-model';

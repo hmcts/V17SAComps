@@ -1,4 +1,12 @@
-import { AfterViewInit, Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ContentChildren,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+} from '@angular/core';
 import { GovukRadioComponent } from '../govuk-radio/govuk-radio.component';
 import { GovukErrorComponent } from '../govuk-error/govuk-error.component';
 import { GovukHintComponent } from '../govuk-hint/govuk-hint.component';
@@ -6,10 +14,15 @@ import { NgIf } from '@angular/common';
 import { GovukErrorLineDirective } from '../../directives/govuk-error-line.directive';
 
 @Component({
-    selector: 'govuk-radio-group',
-    templateUrl: './govuk-radio-group.component.html',
-    standalone: true,
-    imports: [GovukErrorLineDirective, NgIf, GovukHintComponent, GovukErrorComponent]
+  selector: 'govuk-radio-group',
+  templateUrl: './govuk-radio-group.component.html',
+  standalone: true,
+  imports: [
+    GovukErrorLineDirective,
+    NgIf,
+    GovukHintComponent,
+    GovukErrorComponent,
+  ],
 })
 export class GovukRadioGroupComponent implements AfterViewInit {
   modelValue: any;
@@ -47,12 +60,11 @@ export class GovukRadioGroupComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     let radios = this.radios?.toArray();
-    radios?.forEach(radio => {
-      radio.onRadioClicked.subscribe(value => {
+    radios?.forEach((radio) => {
+      radio.onRadioClicked.subscribe((value) => {
         this.model = value;
         this.onRadioSelected.emit(value);
       });
     });
   }
-
 }

@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'govuk-select-option',
-    template: '',
-    standalone: true
+  selector: 'govuk-select-option',
+  template: '',
+  standalone: true,
 })
 export class GovukSelectOptionComponent {
   @Input() public id?: string;

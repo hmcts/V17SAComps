@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {GovukTextareaComponent} from "../../../../../libs/src/lib/components/govuk-textarea/govuk-textarea.component";
-import {TextEditorComponent} from "../../../components/text-editor.component";
+import { GovukTextareaComponent } from '../../../../../libs/src/lib/components/govuk-textarea/govuk-textarea.component';
+import { TextEditorComponent } from '../../../components/text-editor.component';
 
 @Component({
   selector: 'lib-test-page3',

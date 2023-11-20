@@ -3,13 +3,12 @@ import { NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-    selector: 'govuk-button',
-    templateUrl: './govuk-button.component.html',
-    standalone: true,
-    imports: [RouterLink, NgIf]
+  selector: 'govuk-button',
+  templateUrl: './govuk-button.component.html',
+  standalone: true,
+  imports: [RouterLink, NgIf],
 })
 export class GovukButtonComponent {
-
   @Input() public id!: string;
   @Input() public name: string = '';
   @Input() public classes: string = '';

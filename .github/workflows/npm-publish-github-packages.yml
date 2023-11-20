@@ -37,7 +37,3 @@ jobs:
       - run: yarn publish ./dist/libs
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-
-
-

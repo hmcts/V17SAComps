@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'govuk-warning',
-    templateUrl: './govuk-warning.component.html',
-    standalone: true
+  selector: 'govuk-warning',
+  templateUrl: './govuk-warning.component.html',
+  standalone: true,
 })
 export class GovukWarningComponent {
   @Input() public message?: string;

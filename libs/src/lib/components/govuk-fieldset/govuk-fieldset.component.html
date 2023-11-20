@@ -1,15 +1,28 @@
 <div [govukErrorLine]="errorText">
-    <fieldset class="govuk-fieldset {{class}}">
+  <fieldset class="govuk-fieldset {{ class }}">
+    <legend
+      *ngIf="title"
+      class="govuk-fieldset__legend {{ titleClass }}"
+      id="fieldset-{{ id }}"
+    >
+      <h1 *ngIf="isPageHeading" class="govuk-fieldset__heading">{{ title }}</h1>
+      <h2 *ngIf="!isPageHeading" class="govuk-fieldset__heading">
+        {{ title }}
+      </h2>
+    </legend>
 
-        <legend *ngIf="title" class="govuk-fieldset__legend {{titleClass}}" id="fieldset-{{id}}">
-            <h1 *ngIf="isPageHeading" class="govuk-fieldset__heading"> {{title}} </h1>
-            <h2 *ngIf="!isPageHeading" class="govuk-fieldset__heading"> {{title}} </h2>
-        </legend>
+    <govuk-hint
+      *ngIf="hintText"
+      id="hint-{{ id }}"
+      [text]="hintText"
+      [classes]="hintClass"
+    ></govuk-hint>
+    <govuk-error
+      id="error-{{ id }}"
+      [text]="errorText"
+      [class]="errorClass"
+    ></govuk-error>
 
-        <govuk-hint *ngIf="hintText" id="hint-{{id}}" [text]="hintText" [classes]="hintClass"></govuk-hint>
-        <govuk-error id="error-{{id}}" [text]="errorText" [class]="errorClass"></govuk-error>
-
-        <ng-content></ng-content>
-
-    </fieldset>
+    <ng-content></ng-content>
+  </fieldset>
 </div>

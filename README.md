@@ -1,8 +1,8 @@
 # V17SAComps
+
 The purpose of the project is to examine the obstacles in create HMCTS User journeys from Angular 16 Standalone components.
 
 With the release of Angular 17 it will be used to investigate the barriers to adoption with HMCTS
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.9.
 

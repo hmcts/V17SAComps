@@ -6,14 +6,20 @@ import { FormsModule } from '@angular/forms';
 import { GovukFieldComponent } from '../govuk-field/govuk-field.component';
 
 @Component({
-    selector: 'govuk-input-autocomplete',
-    templateUrl: './govuk-input-autocomplete.component.html',
-    styleUrls: ['./govuk-input-autocomplete.component.scss'],
-    standalone: true,
-    imports: [GovukFieldComponent, FormsModule, NgClass, NgIf, NgFor, GovukLinkActionComponent]
+  selector: 'govuk-input-autocomplete',
+  templateUrl: './govuk-input-autocomplete.component.html',
+  styleUrls: ['./govuk-input-autocomplete.component.scss'],
+  standalone: true,
+  imports: [
+    GovukFieldComponent,
+    FormsModule,
+    NgClass,
+    NgIf,
+    NgFor,
+    GovukLinkActionComponent,
+  ],
 })
 export class GovukInputAutocompleteComponent implements OnInit {
-
   @Input() public id?: string;
   @Input() public name?: string;
   @Input() public class?: string;
@@ -103,8 +109,10 @@ export class GovukInputAutocompleteComponent implements OnInit {
   }
 
   autocompleteListStyle(i: number) {
-    let classStyle = this.selectedIndex == i ? 'selected-item' : ''
-    return classStyle + (this.values.length - 1 == i ? ' no-border-bottom' : '');
+    let classStyle = this.selectedIndex == i ? 'selected-item' : '';
+    return (
+      classStyle + (this.values.length - 1 == i ? ' no-border-bottom' : '')
+    );
   }
 
   private setNewSelectedValue() {
@@ -120,7 +128,6 @@ export class GovukInputAutocompleteComponent implements OnInit {
         this.values = [];
         this.onDebounce.emit(this.model);
       }
-    })
+    });
   }
-
 }

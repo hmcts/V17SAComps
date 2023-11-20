@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {NgxWigModule} from "ngx-wig";
+import { NgxWigModule } from 'ngx-wig';
 
 @Component({
   selector: 'govuk-text-editor',

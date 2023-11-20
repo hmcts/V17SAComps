@@ -1,4 +1,11 @@
-import { Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
+import {
+  Component,
+  ContentChildren,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+} from '@angular/core';
 import { GovukCheckboxComponent } from './govuk-checkbox.component';
 import { GovukErrorComponent } from '../govuk-error/govuk-error.component';
 import { GovukHintComponent } from '../govuk-hint/govuk-hint.component';
@@ -6,10 +13,15 @@ import { NgIf } from '@angular/common';
 import { GovukErrorLineDirective } from '../../directives/govuk-error-line.directive';
 
 @Component({
-    selector: 'govuk-checkbox-group',
-    templateUrl: './govuk-checkbox-group.component.html',
-    standalone: true,
-    imports: [GovukErrorLineDirective, NgIf, GovukHintComponent, GovukErrorComponent]
+  selector: 'govuk-checkbox-group',
+  templateUrl: './govuk-checkbox-group.component.html',
+  standalone: true,
+  imports: [
+    GovukErrorLineDirective,
+    NgIf,
+    GovukHintComponent,
+    GovukErrorComponent,
+  ],
 })
 export class GovukCheckboxGroupComponent {
   @Input() public id!: string;
@@ -20,7 +32,7 @@ export class GovukCheckboxGroupComponent {
   @Output() public modelChange = new EventEmitter<any>();
   @Input() get model() {
     return this.radioModel;
-  } 
+  }
 
   set model(value) {
     this.radioModel = value;
@@ -46,11 +58,12 @@ export class GovukCheckboxGroupComponent {
   ngAfterViewInit(): void {
     let checkboxes = this.checkboxes?.toArray();
     checkboxes?.forEach((checkbox) => {
-      checkbox.onClicked.subscribe(_ => {
-        this.model = checkboxes?.filter(x => x.checked).map(x => x.value.toString()) ?? [];
+      checkbox.onClicked.subscribe((_) => {
+        this.model =
+          checkboxes?.filter((x) => x.checked).map((x) => x.value.toString()) ??
+          [];
         this.onCheckboxSelected.emit(this.model);
       });
     });
   }
-
 }

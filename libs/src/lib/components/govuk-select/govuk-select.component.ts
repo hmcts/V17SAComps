@@ -1,17 +1,23 @@
-import { Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
+import {
+  Component,
+  ContentChildren,
+  EventEmitter,
+  Input,
+  Output,
+  QueryList,
+} from '@angular/core';
 import { GovukSelectOptionComponent } from './govuk-select-option.component';
 import { NgClass, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { GovukFieldComponent } from '../govuk-field/govuk-field.component';
 
 @Component({
-    selector: 'govuk-select',
-    templateUrl: './govuk-select.component.html',
-    standalone: true,
-    imports: [GovukFieldComponent, FormsModule, NgClass, NgFor]
+  selector: 'govuk-select',
+  templateUrl: './govuk-select.component.html',
+  standalone: true,
+  imports: [GovukFieldComponent, FormsModule, NgClass, NgFor],
 })
 export class GovukSelectComponent {
-
   @Input() public id?: string;
   @Input() public name?: string;
 
@@ -33,5 +39,7 @@ export class GovukSelectComponent {
   public options!: QueryList<GovukSelectOptionComponent>;
 
   @Output() modelChange = new EventEmitter();
-  onChange(event: any) { this.modelChange.emit(event.target.value); }
+  onChange(event: any) {
+    this.modelChange.emit(event.target.value);
+  }
 }

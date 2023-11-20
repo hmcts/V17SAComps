@@ -1,30 +1,44 @@
 import { ViewportScroller, NgIf } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
-    selector: 'govuk-error-summary',
-    templateUrl: './govuk-error-summary.component.html',
-    standalone: true,
-    imports: [NgIf]
+  selector: 'govuk-error-summary',
+  templateUrl: './govuk-error-summary.component.html',
+  standalone: true,
+  imports: [NgIf],
 })
 export class GovukErrorSummaryComponent implements AfterViewInit {
-  @ViewChild("errorSummnaryDiv") errorSummary?: ElementRef;
+  @ViewChild('errorSummnaryDiv') errorSummary?: ElementRef;
   @Input() title!: String;
   @Input() autofocus: boolean = true;
 
   ngAfterViewInit(): void {
-    if(this.autofocus) this.focus();
-  }  
-  
-  public focus() {    
-    this.errorSummary?.nativeElement.focus(); 
+    if (this.autofocus) this.focus();
+  }
+
+  public focus() {
+    this.errorSummary?.nativeElement.focus();
   }
 }
 
 @Component({
-    selector: 'govuk-error-link',
-    template: `<li><a (click)="scrollToAnchor()" (keyup.enter)="scrollToAnchor()" tabindex="0" role="link">{{message}}</a></li>`,
-    standalone: true
+  selector: 'govuk-error-link',
+  template: `<li>
+    <a
+      (click)="scrollToAnchor()"
+      (keyup.enter)="scrollToAnchor()"
+      tabindex="0"
+      role="link"
+      >{{ message }}</a
+    >
+  </li>`,
+  standalone: true,
 })
 export class GovukErrorLinkComponent {
   @Input() anchorId?: string;

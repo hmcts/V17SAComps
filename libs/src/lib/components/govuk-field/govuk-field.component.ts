@@ -6,10 +6,16 @@ import { GovukLabelComponent } from '../govuk-label/govuk-label.component';
 import { GovukErrorLineDirective } from '../../directives/govuk-error-line.directive';
 
 @Component({
-    selector: 'govuk-field',
-    templateUrl: './govuk-field.component.html',
-    standalone: true,
-    imports: [GovukErrorLineDirective, GovukLabelComponent, NgIf, GovukHintComponent, GovukErrorComponent]
+  selector: 'govuk-field',
+  templateUrl: './govuk-field.component.html',
+  standalone: true,
+  imports: [
+    GovukErrorLineDirective,
+    GovukLabelComponent,
+    NgIf,
+    GovukHintComponent,
+    GovukErrorComponent,
+  ],
 })
 export class GovukFieldComponent {
   @Input() public id?: string;

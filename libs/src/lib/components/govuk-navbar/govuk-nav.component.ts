@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'govuk-nav',
-    template: '',
-    standalone: true
+  selector: 'govuk-nav',
+  template: '',
+  standalone: true,
 })
 export class GovukNavComponent {
   @Input() public label!: string;

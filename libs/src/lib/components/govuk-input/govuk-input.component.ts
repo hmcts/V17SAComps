@@ -5,13 +5,18 @@ import { NgIf, NgClass } from '@angular/common';
 import { GovukFieldComponent } from '../govuk-field/govuk-field.component';
 
 @Component({
-    selector: 'govuk-input',
-    templateUrl: './govuk-input.component.html',
-    standalone: true,
-    imports: [GovukFieldComponent, NgIf, FormsModule, NgClass, GovukLinkActionComponent]
+  selector: 'govuk-input',
+  templateUrl: './govuk-input.component.html',
+  standalone: true,
+  imports: [
+    GovukFieldComponent,
+    NgIf,
+    FormsModule,
+    NgClass,
+    GovukLinkActionComponent,
+  ],
 })
 export class GovukInputComponent {
-
   @Input() public id?: string;
   @Input() public name?: string;
   @Input() public class?: string;
@@ -20,7 +25,7 @@ export class GovukInputComponent {
   @Input() public maxlength?: number = 50;
   @Input() public suffix?: string;
   @Input() public prefix?: string;
-  
+
   @Output() modelChange = new EventEmitter();
   @Output() onInputBlur = new EventEmitter();
   @Output() onInputFocus = new EventEmitter();
@@ -43,5 +48,4 @@ export class GovukInputComponent {
   @Input() public linkActionAction?: any;
 
   @Input() public model: any;
-
 }
