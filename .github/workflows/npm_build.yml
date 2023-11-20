@@ -26,9 +26,5 @@ jobs:
 
       - name: Publish version
         run: yarn publish  dist/libs --new-version ${{ steps.release.outputs.version }} --access public
-        with:
-          node-version: 18
-          registry-url: https://npm.pkg.github.com/
-          scope: '@hmcts'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_api_token }}
