@@ -1,6 +1,6 @@
 {
   "name": "@hmcts/sa-components",
-  "version": "0.0.2-beta.27",
+  "version": "0.0.2-beta.29",
   "peerDependencies": {
     "@angular/common": "^17.0.2",
     "@angular/core": "^17.0.2",

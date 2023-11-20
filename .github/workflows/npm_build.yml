@@ -22,7 +22,7 @@ jobs:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
       - run: yarn install --frozen-lockfile
-          - run: yarn run nx build sa-components
+      - run: yarn run nx build sa-components
 
       - name: Publish version
         run: yarn publish  dist/libs --new-version ${{ steps.release.outputs.version }} --access public
