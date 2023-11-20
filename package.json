@@ -1,6 +1,6 @@
 {
   "name": "@hmcts/v17-sacomps",
-  "version": "0.0.2-beta.22",
+  "version": "0.0.2-beta.23",
   "scripts": {
     "ng": "ng",
     "start": "nx serve",
