@@ -8,7 +8,7 @@ export const appRoutes: Route[] = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'test-page1',
+    redirectTo: 'test-page4',
   },
   { path: 'test-page1', component: TestPage1Component },
   { path: 'test-page2', component: TestPage2Component },

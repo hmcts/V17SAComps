@@ -34,13 +34,11 @@ export class TestPage2Component {
     {
       id: '4',
       heading: 'How people read',
-      summary: 'Summary 3',
       content: 'This is the content for How people read.',
     },
     {
       id: '3',
       heading: 'Know your audience',
-      summary: 'Summary 4',
       content: 'This is the content for Know your audience.',
     },
   ];

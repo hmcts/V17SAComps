@@ -65,3 +65,5 @@ export * from './lib/icons/arrow-right.icon';
 export * from './lib/patterns/address-form/address-form.component';
 
 export * from './lib/models/address-model';
+
+export * from './lib/components/govuk-frame/govuk-frame.component';
