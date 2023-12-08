@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'arrow-right-icon',
+  styles: `@use '../../../../node_modules/govuk-frontend/govuk/all';`,
   template: `
     <svg
       class="govuk-button__start-icon"

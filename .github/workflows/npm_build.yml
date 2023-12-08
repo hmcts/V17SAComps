@@ -25,6 +25,6 @@ jobs:
       - run: yarn run nx build sa-components
 
       - name: Publish version
-        run: yarn publish  dist/libs --new-version ${{ steps.release.outputs.version }} --access public
+        run: yarn publish  dist/@hmcts/sa-components --new-version ${{ steps.release.outputs.version }} --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_api_token }}

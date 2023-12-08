@@ -10,6 +10,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
         "outputPath": "dist/v17-sacomps",
+        "preserveSymlinks": true,
         "index": "src/index.html",
         "main": "src/main.ts",
         "polyfills": ["zone.js"],
@@ -23,7 +24,12 @@
             "output": "assets"
           }
         ],
-        "styles": ["src/styles.scss"],
+        "styles": ["./src/assets/govuk-frontend-4.7.0.min.css"],
+        "stylePreprocessorOptions": {
+          "includePaths": [
+            "node_modules/@govuk-frontend/gov-uk"
+          ]
+        },
         "scripts": []
       },
       "configurations": {
@@ -32,12 +38,12 @@
             {
               "type": "initial",
               "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumError": "1.5mb"
             },
             {
               "type": "anyComponentStyle",
               "maximumWarning": "2kb",
-              "maximumError": "4kb"
+              "maximumError": "180kb"
             }
           ],
           "outputHashing": "all"

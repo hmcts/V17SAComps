@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  GovukHeaderComponent,
-  GovukFooterComponent,
-  GovukCookieBannerComponent,
-  GovukPhaseBannerComponent,
-} from '@hmcts-sa-components';
+
 import { RouterOutlet } from '@angular/router';
+import {
+  GovukAccordionComponent,
+  GovukBodyComponent,
+  GovukCookieBannerComponent,
+  GovukFooterComponent,
+  GovukHeaderComponent,
+  GovukPhaseBannerComponent,
+} from "@hmcts/sa-components";
 
 @Component({
   selector: 'lib-sa-components',
@@ -16,8 +19,10 @@ import { RouterOutlet } from '@angular/router';
     GovukFooterComponent,
     GovukHeaderComponent,
     GovukCookieBannerComponent,
+    GovukBodyComponent,
     GovukPhaseBannerComponent,
     RouterOutlet,
+    GovukAccordionComponent,
   ],
   templateUrl: './sa-base.component.html',
   styleUrls: ['./sa-base.component.scss'],

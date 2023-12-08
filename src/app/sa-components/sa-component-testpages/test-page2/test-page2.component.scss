@@ -1,5 +1,20 @@
-@import 'node_modules/govuk-frontend/govuk/all';
-@import 'node_modules/govuk-frontend/govuk/components/accordion';
+//@use "govuk-frontend/govuk/components/accordion/accordion";
+
+.app-example-page{
+  border-left: 1px solid #b1b4b6;
+  border-right: 1px solid #b1b4b6;
+  border-bottom: 1px solid #b1b4b6;
+  padding: 30px;
+}
 .full-width {
+  display: block;
   width: 100%;
+}
+.button-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-all-text {
+  margin-left: 10%;
 }

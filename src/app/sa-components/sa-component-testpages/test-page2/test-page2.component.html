@@ -1,18 +1,19 @@
-<govuk-accordion
+<div class="app-example-page">
+<govuk-accordion class="govuk-accordion"  id="accordion-default"
   [id]="'writing'"
-  class="govuk-header__container--full-width full-width"
 >
   @for (item of testContent; track item.id) {
-    <div class="govuk-width-container">
       <govuk-accordion-section
         id="{{ item.id }}"
         heading="{{ item.heading }}"
         summary="{{ item.summary }}"
       >
         <p>
-          {{ item.summary }}
+          {{ item.content }}
         </p>
       </govuk-accordion-section>
-    </div>
   }
 </govuk-accordion>
+</div>
+
+<!--The linter seems not to recogise the new template syntax here-->
