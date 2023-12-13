@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   GovukBreadcrumbComponent,
-  GovukBreadcrumbGroupComponent
+  GovukBreadcrumbGroupComponent,
+  BankDetailsComponent
 } from "@hmcts/sa-components";
 
 @Component({
   selector: 'app-test-page5',
   standalone: true,
-  imports: [CommonModule,GovukBreadcrumbComponent, GovukBreadcrumbGroupComponent],
+  imports: [CommonModule, GovukBreadcrumbComponent, GovukBreadcrumbGroupComponent, BankDetailsComponent],
   templateUrl: './test-page5.component.html',
   styleUrl: './test-page5.component.scss'
 })

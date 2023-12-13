@@ -64,6 +64,7 @@ export * from './lib/icons/arrow-right.icon';
 export * from './lib/icons/aspect-ratio.icon';
 
 export * from './lib/patterns/address-form/address-form.component';
+export * from './lib/patterns/bank-details/bank-details.component';
 
 export * from './lib/models/address-model';
 

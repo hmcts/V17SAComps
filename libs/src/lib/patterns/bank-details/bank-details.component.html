@@ -1,9 +1,30 @@
+<div class="pattern-frame">
 <h1 class="govuk-heading-l">Bank or building society account details</h1>
-<div class="govuk-form-group">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="govuk-form-group"         [ngClass]="{
+          'govuk-form-group--error':
+            form.get('accountName')?.touched &&
+            form.get('accountName')?.errors?.['required']
+        }">
   <label class="govuk-label" for="name-on-the-account">
     Name on the account
   </label>
-  <input class="govuk-input" id="name-on-the-account" name="nameOnTheAccount" type="text" spellcheck="false" autocomplete="name">
+    <div
+      *ngIf="
+            form.get('accountName')?.touched &&
+            form.get('acoountName')?.errors?.['required']
+          "
+    >
+      <p id="address-line-1-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> ‘Enter the name on the account’.
+      </p>
+  <input class="govuk-input"
+         id="name-on-the-account"
+         name="nameOnTheAccount"
+         type="text"
+         spellcheck="false"
+         formControlName = "accountName"
+         autocomplete="name">
 </div>
 <div class="govuk-form-group">
   <label class="govuk-label" for="sort-code">
@@ -32,6 +53,9 @@
   </div>
   <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint">
 </div>
+  </div>
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
+</form>
+</div>
