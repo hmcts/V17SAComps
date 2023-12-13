@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {GovukAccordionComponent, GovukAccordionSectionComponent,
-  ArrowRightIcon, GovukButtonComponent} from "@hmcts/sa-components";
-
+import {
+  GovukAccordionComponent,
+  GovukAccordionSectionComponent,
+  GovukButtonComponent, ArrowRightIconComponent,
+} from '@hmcts/sa-components';
 
 @Component({
   selector: 'lib-test-page2',
@@ -12,7 +14,7 @@ import {GovukAccordionComponent, GovukAccordionSectionComponent,
     GovukAccordionComponent,
     GovukAccordionSectionComponent,
     GovukButtonComponent,
-    ArrowRightIcon
+    ArrowRightIconComponent,
   ],
   templateUrl: './test-page2.component.html',
   styleUrls: ['./test-page2.component.scss'],

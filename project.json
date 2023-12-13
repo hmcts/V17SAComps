@@ -26,9 +26,7 @@
         ],
         "styles": ["./src/assets/govuk-frontend-4.7.0.min.css"],
         "stylePreprocessorOptions": {
-          "includePaths": [
-            "node_modules/@govuk-frontend/gov-uk"
-          ]
+          "includePaths": ["node_modules/@govuk-frontend/gov-uk"]
         },
         "scripts": []
       },

@@ -1,7 +1,7 @@
 @use '../../../../node_modules/govuk-frontend/govuk/all';
-@use "govuk-frontend/govuk/tools/exports";
+@use 'govuk-frontend/govuk/tools/exports';
 //@use "govuk-frontend/govuk/components/accordion";
-@use "govuk-frontend/govuk/components/accordion/accordion";
+@use 'govuk-frontend/govuk/components/accordion/accordion';
 
 .govuk-accordion__show-all {
   font-family: 'GDS Transport', arial, sans-serif;
@@ -29,7 +29,7 @@
   margin-bottom: 0;
   background: none;
   cursor: pointer;
- }
+}
 //@include govuk-exports("govuk/component/accordion") {
 //  $govuk-accordion-base-colour: govuk-colour("black");
 //  $govuk-accordion-hover-colour: govuk-colour("light-grey");

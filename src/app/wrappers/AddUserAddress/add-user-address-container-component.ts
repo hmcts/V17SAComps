@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AddressFormComponent, Address } from "@hmcts/sa-components";
+import { AddressFormComponent, Address } from '@hmcts/sa-components';
 
 @Component({
   selector: 'govuk-add-user-address-container-component',

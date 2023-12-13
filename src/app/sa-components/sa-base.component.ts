@@ -9,7 +9,7 @@ import {
   GovukFooterComponent,
   GovukHeaderComponent,
   GovukPhaseBannerComponent,
-} from "@hmcts/sa-components";
+} from '@hmcts/sa-components';
 
 @Component({
   selector: 'lib-sa-components',

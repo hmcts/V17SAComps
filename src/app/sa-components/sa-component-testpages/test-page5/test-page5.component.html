@@ -1,0 +1,9 @@
+<govuk-breadcrumb-group>
+  @for (item of breadCrumbs; track item.label) {
+    <govuk-breadcrumb
+      text="{{item.label}}"
+      link="{{item.link}}"
+    >
+    </govuk-breadcrumb>
+  }
+</govuk-breadcrumb-group>

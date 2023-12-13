@@ -7,7 +7,5 @@
     "entryFile": "src/public-api.ts",
     "styleIncludePaths": ["src/lib/styles"]
   },
-  "assets": [
-    "style.scss"
-  ]
+  "assets": ["style.scss"]
 }

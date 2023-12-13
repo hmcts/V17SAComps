@@ -60,7 +60,7 @@ import { GreyTagDirective } from './directives/grey-tag.directive';
 import { NoMarginHintDirective } from './directives/no-margin-hint.directive';
 import { SuccessNotificationBannerDirective } from './directives/success-notification-banner.directive';
 //icons
-import { ArrowRightIcon } from './icons/arrow-right.icon';
+import { ArrowRightIconComponent } from './icons/arrow-right.icon';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -140,7 +140,7 @@ const directives = [
   SuccessNotificationBannerDirective,
 ];
 
-const icons = [ArrowRightIcon];
+const icons = [ArrowRightIconComponent];
 
 const models = [Address];
 

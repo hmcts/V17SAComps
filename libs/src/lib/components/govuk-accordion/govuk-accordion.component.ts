@@ -1,7 +1,13 @@
-import {AfterViewInit, Component, ContentChildren, Input, OnInit, QueryList } from '@angular/core';
-import {GovukAccordionSectionComponent} from './govuk-accordion-section.component';
-import {CommonModule} from "@angular/common";
-import {ArrowRightIcon} from "../../icons/arrow-right.icon";
+import {
+  AfterViewInit,
+  Component,
+  ContentChildren,
+  Input,
+  OnInit,
+  QueryList,
+} from '@angular/core';
+import { GovukAccordionSectionComponent } from './govuk-accordion-section.component';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -9,15 +15,15 @@ import {ArrowRightIcon} from "../../icons/arrow-right.icon";
   templateUrl: './govuk-accordion.component.html',
   styleUrls: ['./govuk-accordion.component.scss'],
   standalone: true,
-  imports: [CommonModule, ArrowRightIcon]
+  imports: [CommonModule],
 })
-export class GovukAccordionComponent  implements OnInit, AfterViewInit{
+export class GovukAccordionComponent implements OnInit, AfterViewInit {
   @Input() public id?: string;
 
   @ContentChildren(GovukAccordionSectionComponent)
   public tabs!: QueryList<GovukAccordionSectionComponent>;
 
-  AllSectionsButtonText?: string =  'Open all sections';
+  AllSectionsButtonText?: string = 'Open all sections';
   allOpen?: boolean = false;
 
   toggleAll() {
@@ -32,11 +38,11 @@ export class GovukAccordionComponent  implements OnInit, AfterViewInit{
   }
 
   ngOnInit(): void {
-    console.log('accordion :: initialised ', this.tabs)
+    console.log('accordion :: initialised ', this.tabs);
   }
 
   ngAfterViewInit(): void {
-    console.log('accordion :: initialised ', this.tabs)
-    console.log('accordion :: AfterViewInit ', this.tabs)
+    console.log('accordion :: initialised ', this.tabs);
+    console.log('accordion :: AfterViewInit ', this.tabs);
   }
 }

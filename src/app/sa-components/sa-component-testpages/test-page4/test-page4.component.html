@@ -1,4 +1,5 @@
-<div class="app-example-page" #anchorRef>
-  <govuk-frame [topAnchor]="topLeft"
-          [initialSize]="size"></govuk-frame>
+<div #anchorRef>
+  <govuk-frame [topAnchor]="topLeft" [resizable]="true" [initialSize]="size">
+    <govuk-address-form></govuk-address-form>
+  </govuk-frame>
 </div>

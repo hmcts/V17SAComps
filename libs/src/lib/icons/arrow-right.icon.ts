@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'arrow-right-icon',
+  selector: 'govuk-arrow-right-icon',
   styles: `@use '../../../../node_modules/govuk-frontend/govuk/all';`,
   template: `
     <svg
@@ -18,4 +18,4 @@ import { Component } from '@angular/core';
   `,
   standalone: true,
 })
-export class ArrowRightIcon {}
+export class ArrowRightIconComponent {}
