@@ -44,3 +44,5 @@ Thumbs.db
 .angular
 /.nx/
 /libs/node_modules/
+/libs/package-lock.json
+/package-lock.json

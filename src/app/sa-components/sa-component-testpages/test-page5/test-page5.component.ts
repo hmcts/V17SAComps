@@ -16,8 +16,8 @@ export class TestPage5Component {
 
   public breadCrumbs = [
     { link: '#', label: 'Home'},
-    {   link: '#', label: 'Passports, travel and living abroad'},
-    { link: '#', label: 'Travel aboard'}
+    { link: '#', label: 'Passports, travel and living abroad'},
+    { link: '#', label: 'Travel abroad'}
   ]
 
 }

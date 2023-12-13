@@ -15,11 +15,13 @@ import { Address } from '../../models/address-model';
   styleUrls: ['./address-form.component.scss'],
 })
 export class AddressFormComponent implements OnInit {
+
+  @Input() editAddress: Address | undefined;
+  @Output() emitAddress: EventEmitter<Address>;
   constructor(private fb: FormBuilder) {
     this.emitAddress = new EventEmitter<Address>();
   }
-  @Input() editAddress: Address | undefined;
-  @Output() emitAddress: EventEmitter<Address>;
+
 
   form = this.fb.group({
     addressLine1: ['', Validators.required],
