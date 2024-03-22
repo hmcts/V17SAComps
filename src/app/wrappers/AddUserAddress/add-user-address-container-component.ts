@@ -7,8 +7,13 @@ import { AddressFormComponent, Address } from '@hmcts/sa-components';
   selector: 'govuk-add-user-address-container-component',
   standalone: true,
   imports: [CommonModule, AddressFormComponent, AddressFormComponent],
-  templateUrl: './add-user-address-container-component.html',
   styleUrls: ['./add-user-address-container-component.scss'],
+  template:`
+      <div class="govuk-width-container">
+          <govuk-address-form (emitAddress)="submitNext($event)"></govuk-address-form>
+      </div>
+  `
+
 })
 export class AddUserAddressContainerComponent {
   @Input()

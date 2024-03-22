@@ -1,26 +1,28 @@
 <div class="pattern-frame">
 <h1 class="govuk-heading-l">Bank or building society account details</h1>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div class="govuk-form-group"         [ngClass]="{
+  <div class="govuk-form-group"
+       [ngClass]="{
           'govuk-form-group--error':
             form.get('accountName')?.touched &&
             form.get('accountName')?.errors?.['required']
         }">
-  <label class="govuk-label" for="name-on-the-account">
+  <label class="govuk-label" for="accountName">
     Name on the account
   </label>
     <div
       *ngIf="
             form.get('accountName')?.touched &&
-            form.get('acoountName')?.errors?.['required']
+            form.get('accountName')?.errors?.['required']
           "
     >
-      <p id="address-line-1-error" class="govuk-error-message">
-        <span class="govuk-visually-hidden">Error:</span> ‘Enter the name on the account’.
+      <p id="accountName-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span> Enter the name on the account.
       </p>
+    </div>
   <input class="govuk-input"
-         id="name-on-the-account"
-         name="nameOnTheAccount"
+         id="accountName"
+         name="accountName"
          type="text"
          spellcheck="false"
          formControlName = "accountName"
@@ -33,7 +35,23 @@
   <div id="sort-code-hint" class="govuk-hint">
     Must be 6 digits long
   </div>
-  <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing" id="sort-code" name="sortCode" type="text" spellcheck="false" aria-describedby="sort-code-hint" inputmode="numeric">
+  <div
+    *ngIf="
+            form.get('sortCode')?.touched &&
+            form.get('sortCode')?.errors?.['required']
+          "
+  >
+    <p id="sort-code-error" class="govuk-error-message">
+      <span class="govuk-visually-hidden">Error:</span> Enter the sort code on the account.
+    </p>
+  </div>
+  <input class="govuk-input govuk-input--width-5 govuk-input--extra-letter-spacing"
+         id="sort-code"
+         name="sortCode"
+         type="text" spellcheck="false"
+         formControlName = "sortCode"
+         aria-describedby="sort-code-hint"
+         inputmode="numeric">
 </div>
 <div class="govuk-form-group">
   <label class="govuk-label" for="account-number">
@@ -42,7 +60,13 @@
   <div id="account-number-hint" class="govuk-hint">
     Must be between 6 and 8 digits long
   </div>
-  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="account-number" name="accountNumber" type="text" spellcheck="false" aria-describedby="account-number-hint" inputmode="numeric">
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing"
+         id="account-number"
+         name="accountNumber"
+         type="text" spellcheck="false"
+         formControlName = "accountNumber"
+         aria-describedby="account-number-hint"
+         inputmode="numeric">
 </div>
 <div class="govuk-form-group">
   <label class="govuk-label" for="roll-number">
@@ -51,11 +75,21 @@
   <div id="roll-number-hint" class="govuk-hint">
     You can find it on your card, statement or passbook
   </div>
-  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="roll-number" name="rollNumber" type="text" spellcheck="false" aria-describedby="roll-number-hint">
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing"
+         id="roll-number"
+         name="rollNumber"
+         formControlName = "rollNumber"
+         type="text"
+         spellcheck="false"
+         aria-describedby="roll-number-hint">
 </div>
-  </div>
+  <!-- These are here for debug -->
+<!--    <pre> {{form.value | json}}</pre>-->
+<!--    <pre> {{form.get('accountName')?.errors | json}}</pre>-->
+
+</form>
 <button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
-</form>
+
 </div>
