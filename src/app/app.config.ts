@@ -14,6 +14,9 @@ import { AddressFacadeServiceImpl } from './sa-components/facade-example/address
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    // The Application uses AddressFacadeImpl to provide persistence to the Application
+    // This could be replaced with another technology such as Component Store or the new NgRx Signals store
+    // By using a Facade here and you can change the implementation globally without disturbing the rest of the application
     { provide: AddressFacadeServiceImpl, useClass: NxRxAddressFacadeService},
     // provideHttpClient(withFetch()),
     provideRouter(
